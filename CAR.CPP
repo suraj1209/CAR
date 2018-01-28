@@ -1,0 +1,56 @@
+#include<iostream.h>
+#include<graphics.h>
+#include<dos.h>
+#include<conio.h>
+void main()
+{
+int gm=DETECT,gd,i;
+initgraph(&gm,&gd,"C:\\TURBOC3\\BGI");
+for(i=0;i<700;i++)
+{
+setcolor(RED);
+settextstyle(4,0,5);
+outtextxy(200,100,"MAH CAR");
+setcolor(WHITE);
+line(0,390,700,390);
+line(50+i,370,90+i,370);
+setcolor(WHITE);
+circle(110+i,370,20);
+setfillstyle(CLOSE_DOT_FILL,RED);
+floodfill(110+i,370,WHITE);
+line(130+i,370,220+i,370);
+setcolor(WHITE);
+circle(240+i,370,20);
+setfillstyle(CLOSE_DOT_FILL,RED);
+floodfill(240+i,370,WHITE);
+setcolor(WHITE);
+line(260+i,370,300+i,370);
+line(300+i,370,300+i,350);
+line(300+i,350,240+i,330);
+line(240+i,330,200+i,300);
+line(200+i,300,110+i,300);
+line(110+i,300,80+i,330);
+line(80+i,330,50+i,340);
+line(50+i,340,50+i,370);
+setfillstyle(CLOSE_DOT_FILL,BLUE);
+floodfill(250+i,350,WHITE);
+setcolor(WHITE);
+line(165+i,305,165+i,330);
+line(165+i,330,230+i,330);
+line(230+i,330,195+i,305);
+line(195+i,305,165+i,305);
+setfillstyle(CLOSE_DOT_FILL,GREEN);
+floodfill(200+i,320,WHITE);
+setcolor(WHITE);
+line(160+i,305,160+i,330);
+line(160+i,330,95+i,330);
+line(95+i,330,120+i,305);
+line(120+i,305,160+i,305);
+setfillstyle(CLOSE_DOT_FILL,GREEN);
+floodfill(130+i,320,WHITE);
+delay(10);
+cleardevice();
+}
+getch();
+closegraph();
+ }
